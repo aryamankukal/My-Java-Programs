@@ -1,38 +1,33 @@
 public class PerfectNumber {
-  
-  	public static void main(String args[])  {
 
-        public static boolean isPerfectNumber(int number) {
-        
-            if (number >= 1) {
-            
-                int sumoffactors = 0;
-                int thenumberwearedividingby = number - 1;
+	public static void main(String args[])  {
 
-                while (thenumberwearedividingby >= 1) {
-                    if (number % thenumberwearedividingby == 0) {
-                        sumoffactors = sumoffactors + thenumberwearedividingby;
-                    }
-                
-                    thenumberwearedividingby = thenumberwearedividingby - 1;
-                }
-            
-                if (sumoffactors == number) {
-                    return true;
-                } else {
-                    return false;
-                }
-            
-            } else {
-                return false;
-            }
-        }
-    }
+    
+		public static boolean isPerfectNumber(int number) {
+
+			if (number >= 1) {
+
+				int sumoffactors = 0;
+				int thenumberwearedividingby = number - 1;
+
+				while (thenumberwearedividingby >= 1) {
+					if (number % thenumberwearedividingby == 0) {
+						sumoffactors = sumoffactors + thenumberwearedividingby;
+					}
+
+					thenumberwearedividingby = thenumberwearedividingby - 1;
+				}
+
+				if (sumoffactors == number) {
+					return true;
+				} else {
+					return false;
+				}
+
+			} else {
+				return false;
+			}
+		}
+	}
 }
 
-
-
-		
-		
-		
-		
