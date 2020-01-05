@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ExcersieTerminal { // this is Main class
+
+	public static void main(String args[])  {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int numberscount = 0;
+		int sum = 0;
+		int whichnumberyouareentering = 1;
+		
+		while (numberscount < 10) {
+			System.out.println("Enter number #" + whichnumberyouareentering + ": ");
+			
+			boolean hasNextInt = scanner.hasNextInt();
+			
+			if (hasNextInt) {
+				int number = scanner.nextInt();
+				scanner.nextLine();
+				sum = sum + number;
+				numberscount++;
+				whichnumberyouareentering++;
+			} else {
+				System.out.println("Invalid number");  
+				break;
+			}
+		}
+		
+		System.out.println("Sum = " + sum);
+		
+		scanner.close();
+	}
+}	
+
+
